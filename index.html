@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation -Networking</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <script src = "animation.js"></script>
+
+    <header class = "headerClass">
+        <h2 class = "titre">Networking</h2>
+        <nav>
+            <div class="menu-toggle">
+                <img src="img/menu.webp" alt="Menu" id="menu-btn">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#definition">Definition</a></li>
+                <li><a href="#typeOfNet">Types</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#lanWork">Work</a></li>
+                <li><a href="#security-wrapper">Security</a></li>
+                <li><a href="#SecVideo">Practic</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.querySelector('nav ul.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
+    <main>
+        <section class = "defin" id = "definition">
+            <h2>What is a Network ?</h2>
+            <p>
+                A network is a collection of computers,
+                 devices, or nodes that are connected together to share resources,
+                  data, and services.
+            </p> 
+        </section>
+        <section class="typeOfNet" id="typeOfNet">
+            <h2>Type Networking</h2>
+            <ul>
+                <li>
+                    PAN (Personal Area Network)
+                    <p>Range/Distance: 1 to 10 meters</p>
+                </li>
+                <li>    
+                    LAN (Local Area Network)
+                    <p>Range/Distance: Up to 100 meters</p>
+                </li>
+                <li>
+                    MAN (Metropolitan Area Network)
+                    <p>Range/Distance:5 to 50 kilometers</p>
+                </li>
+                <li>
+                    WAN (Wide Area Network)
+                    <p>Range/Distance: Across country or the world</p>
+                </li>
+            </ul>
+        </section>
+        <section class="basic" id="basic">
+            <h2>Network basics</h2>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">IP</button>
+                <div class="accordion-content">
+                    <p>
+                        There are 2 types of IP addresses: <strong>private IP</strong> and <strong>public IP</strong>.<br>
+                        - A <strong>private IP</strong> is only accessible within the local network. It identifies the device on the network.<br>
+                        - A <strong>public IP</strong> allows the device to communicate with external networks outside the local network.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">Frame</button>
+                <div class="accordion-content">
+                    <p>
+                        A <strong>frame</strong> is like a container that carries the data so that device B can receive the message.<br>
+                        It includes necessary information such as source and destination addresses and the payload.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">MAC</button>
+                <div class="accordion-content">
+                    <p>
+                        A <strong>MAC (Media Access Control) address</strong> helps determine the path data should take to reach a specific IP.<br>
+                        It identifies the network interface of a device and ensures communication within the local network.
+                    </p>
+                </div>
+            </div>
+            <script src="base.js"></script>
+        </section>
+
+       <section class="lan-work" id="lanWork">
+        <h2>How a LAN Networking Works</h2>
+        <img class="imge" src="img/networkFile.webp" alt="LAN networking diagram without cable">
+        <img class="imge" src="img/networkWifi.webp" alt="LAN networking diagram with cable">
+        
+    </section>
+
+    <section class = "Nat_Pat" id = "Nat_Pat">
+        <h2>Connection with internet</h2>
+        <h5>IDS-IPS</h5>
+        <img class = "imge" src = "img/Nat_Pat.webp" alt = "Nat_Pat image">
+    </section>
+
+    <div class="security-wrapper" id = "security-wrapper">
+        <h2>Network Security</h2>
+
+        <div class="security-grid">
+            <section class="fireWall" id="fireWall">
+            <h3>Firewall</h3>
+            <img class="imge" src="img/firewall.webp" alt="fireWall image">
+            </section>
+
+            <section class="IdsIps" id="IdsIps">
+            <h3>IDS - IPS</h3>
+            <img class="imge" src="img/IPS_IDS.webp" alt="Ids Ips image">
+            </section>
+
+            <section class="vpn" id="vpn">
+            <h3>VPN</h3>
+            <img class="imge" src="img/vpn.webp" alt="VPN image">
+            </section>
+
+            <section class="proxy" id="proxy">
+            <h3>Proxy</h3>
+            <img class="imge" src="img/proxy.webp" alt="proxy image">
+            </section>
+        </div>
+        </div>
+
+    <script src="fullImg.js"></script>
+
+    <section class="SecVideo" id=  "SecVideo">
+        <h2>Practic</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="videoTest.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Networking Presentation. </p>
+            <p>Created by Avo Apanian</p>
+        </div>
+    </footer>
+
+</main>
+</body>
+</html>
